@@ -1,0 +1,17 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: eureka-security-server
+  security: #配置SpringSecurity登录用户名和密码
+    user:
+      name: wenbo
+      password: 123456
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://wenbo:123456@127.0.0.1:8004/eureka/
